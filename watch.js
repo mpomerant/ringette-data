@@ -1,6 +1,8 @@
 // Import the watching library
 var watchr = require('watchr')
 var path = require('path')
+var request = require('request');
+var fs = require("fs");
 
 // Define our watching parameters
 var watchPath = path.join(process.cwd(), 'scrape', 'output', 'delta');
@@ -12,8 +14,8 @@ function listener (changeType, fullPath, currentStat, previousStat) {
             break
         case 'create':
             console.log('the file', fullPath, 'was created', currentStat)
-	    
-            break
+            fs.createReadStream(fullPath).pipe(request.post('http://localhost:3000/api/game'));
+	     break
         case 'delete':
             console.log('the file', fullPath, 'was deleted', previousStat)
             break

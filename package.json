@@ -4,7 +4,7 @@
   "description": "Ringette Website for U14A ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "start": "nohup nodemon watch.js > stdout.txt 2> stderr.txt &"
   },
   "author": "Mark Pomerant",
   "license": "ISC",
@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "casperjs": "^1.1.3",
+    "cron": "^1.1.1",
     "phantomjs": "^2.1.7",
+    "request": "^2.78.0",
     "watchr": "^3.0.1"
   }
 }

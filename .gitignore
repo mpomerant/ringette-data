@@ -2,3 +2,6 @@ node_modules
 
 scrape/output/**
 scrape/screenshot/**
+stdout.txt
+stderr.txt
+nohup.out

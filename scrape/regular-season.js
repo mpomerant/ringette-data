@@ -93,8 +93,14 @@ function convertScoreToStatsNames(teamName) {
     case 'Elora-Fergus':
       result = 'Elora Fergus';
       break;
+    case 'GCRA':
+      result = 'Gloucester Cumberland';
+      break;
     case 'Gloucester-Cumberland':
       result = 'Gloucester Cumberland';
+      break;
+    case 'Sault Ste. Marie':
+      result = 'Sault Ste Marie';
       break;
     default:
       result = teamName;
