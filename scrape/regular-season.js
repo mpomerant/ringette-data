@@ -14,7 +14,7 @@ var savePickeringGameResults = fs.pathJoin(fs.workingDirectory, 'output', 'picke
 var saveStCatherinesGameResults = fs.pathJoin(fs.workingDirectory, 'output', 'stCatherinesResults.json');
 
 var today = new Date();
-var deltaPath = fs.pathJoin(fs.workingDirectory, 'output', 'delta_' + today.getTime() + '.json');
+var deltaPath = fs.pathJoin(fs.workingDirectory, 'output','delta', 'delta_' + today.getTime() + '.json');
 
 var allResults = [];
 var matrix = {};
