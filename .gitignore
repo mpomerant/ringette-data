@@ -1,0 +1,4 @@
+node_modules
+
+scrape/output/**
+scrape/screenshot/**
