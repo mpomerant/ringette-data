@@ -14,7 +14,7 @@ var savePickeringGameResults = fs.pathJoin(fs.workingDirectory, 'output', 'picke
 var saveStCatherinesGameResults = fs.pathJoin(fs.workingDirectory, 'output', 'stCatherinesResults.json');
 
 var today = new Date();
-var deltaPath = fs.pathJoin(fs.workingDirectory, 'output','delta', 'delta_' + today.getTime() + '.json');
+var deltaPath = fs.pathJoin(fs.workingDirectory, 'output', 'delta', 'delta_' + today.getTime() + '.json');
 
 var allResults = [];
 var matrix = {};
@@ -343,7 +343,7 @@ function getNcrllFirstHalfResults() {
 
     var gameId = row.cells[0].innerText;
     var home = row.cells[6].innerText;
-    console.log("home: " + home);
+
     //home = this.convertNcrllNames(home);
     var homeScore = row.cells[7].innerText.trim();
     var visitor = row.cells[4].innerText;
@@ -427,7 +427,7 @@ function getResults(tournament) {
 
       var visitorScore = row.cells[6].innerText;
       var gameDate = row.cells[2].innerText.trim() + ' ' + tournament.year;
-      console.log('gameDate: ' + gameDate);
+
       var job = {};
       job.type = type;
       job.gameId = tournament.name + row.cells[0].innerText.trim();
@@ -451,14 +451,21 @@ function getResults(tournament) {
 var tournaments = [{
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=185&du=1930&pool=+&dn=18++A++++++++++++++++++++&yu=11',
     name: 'Oshawa',
-    complete: false,
+    complete: true,
     year: 2016
   }, {
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=187&du=1962&pool=+&dn=18++A++++++++++++++++++++&yu=11',
     name: 'London & Dorchester',
+    complete: true,
+    year: 2016
+  },{
+    url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=186&du=1944&pool=All+Pools&dn=&yu=11',
+    name: 'Nepean',
     complete: false,
     year: 2016
   }
+
+  
 
 
 
