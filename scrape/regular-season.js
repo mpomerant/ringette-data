@@ -447,25 +447,35 @@ function getResults(tournament) {
   return jobs;
 }
 
-
+var IS_COMPLETE_DEFAULT=true;
 var tournaments = [{
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=185&du=1930&pool=+&dn=18++A++++++++++++++++++++&yu=11',
     name: 'Oshawa',
-    complete: true,
+    complete: IS_COMPLETE_DEFAULT,
     year: 2016
   }, {
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=187&du=1962&pool=+&dn=18++A++++++++++++++++++++&yu=11',
     name: 'London & Dorchester',
-    complete: true,
+    complete: IS_COMPLETE_DEFAULT,
     year: 2016
   },{
     url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=186&du=1944&pool=All+Pools&dn=&yu=11',
     name: 'Nepean',
+    complete: IS_COMPLETE_DEFAULT,
+    year: 2016
+  },
+  {
+    url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=189&du=1976&pool=All+Pools&dn=&yu=11',
+    name: 'Arnprior',
+    complete: false,
+    year: 2016
+  },
+  {
+    url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=191&du=1997&pool=All+Pools&dn=&yu=11,
+    name: 'St Marys',
     complete: false,
     year: 2016
   }
-
-  
 
 
 
