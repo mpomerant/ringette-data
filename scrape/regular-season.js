@@ -448,6 +448,7 @@ function getResults(tournament) {
 }
 
 var IS_COMPLETE_DEFAULT=true;
+
 var tournaments = [{
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=185&du=1930&pool=+&dn=18++A++++++++++++++++++++&yu=11',
     name: 'Oshawa',
@@ -471,7 +472,7 @@ var tournaments = [{
     year: 2016
   },
   {
-    url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=191&du=1997&pool=All+Pools&dn=&yu=11,
+    url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=191&du=1997&pool=All+Pools&dn=&yu=11,',
     name: 'St Marys',
     complete: false,
     year: 2016
