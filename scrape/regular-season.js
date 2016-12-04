@@ -153,6 +153,12 @@ function convertOcrrllNames(teamName) {
     case 'Ajax Shooting Stars':
       result = 'Ajax'
       break;
+    case 'Burlington Blast':
+      result = 'Burlington';
+      break;
+    case 'Oshawa Storm':
+      result = 'Oshawa';
+      break;
 
     default:
       result = '';
@@ -240,7 +246,7 @@ function getSouthernRegionResults() {
 
 function getOcrrlResults() {
   'use strict';
-  var rows = document.querySelectorAll('tr.league_1020.group_11880');
+  var rows = document.querySelectorAll('tr.league_1021.group_11860');
   var jobs = [];
 
   for (var i = 1; i < rows.length; i++) {
@@ -447,7 +453,7 @@ function getResults(tournament) {
   return jobs;
 }
 
-var IS_COMPLETE_DEFAULT=true;
+var IS_COMPLETE_DEFAULT=false;
 
 var tournaments = [{
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=185&du=1930&pool=+&dn=18++A++++++++++++++++++++&yu=11',
@@ -507,7 +513,7 @@ var associations = [{
 
   }, {
     name: 'Central',
-    urls: ['http://centralregionringette.ca/Groups/1013/Schedule/'],
+    urls: ['http://centralontarioringette.ca/Groups/1032/Schedule/'],
     parse: getOcrrlResults,
     convert: convertOcrrllNames,
     output: fs.pathJoin(fs.workingDirectory, 'output', 'ocrrlResults.json'),
