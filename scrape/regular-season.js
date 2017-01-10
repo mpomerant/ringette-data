@@ -368,7 +368,7 @@ function getNcrllFirstHalfResults() {
 
 function getPickeringResults() {
     'use strict';
-    var rows = document.querySelectorAll('.pnlGame.division_1262');
+    var rows = document.querySelectorAll('.pnlGame.division_1356');
     var jobs = [];
 
     for (var i = 0; i < rows.length; i++) {
@@ -391,7 +391,7 @@ function getPickeringResults() {
             job.visitor = visitor;
             job.visitorScore = visitorScore;
             job.tournament = 'Pickering';
-            job.gameDate = new Date('Dec 4 2015').toISOString();
+            job.gameDate = new Date('Dec 2 2016').toISOString();
             jobs.push(job);
 
         }
@@ -466,12 +466,20 @@ var tournaments = [{
         complete: IS_COMPLETE_DEFAULT,
         year: 2016
     },
+
     {
         url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=191&du=1997&pool=All+Pools&dn=&yu=11,',
         name: 'St Marys',
         complete: IS_COMPLETE_DEFAULT,
         year: 2016
     },
+{
+    url: 'http://apringette.com/Tournaments/1344/Divisions/1356/',
+        name: 'Pickering',
+    complete: false,
+    parse: getPickeringResults,
+    year: 2016
+},
     {
         url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=193&du=2014&pool=All+Pools&dn=&yu=11,',
         name: 'Whitby',
@@ -586,14 +594,14 @@ casper.start().then(function () {
             });
 
 
-            casper.waitForSelector('select[name="ctl00$DropDownListDivisions"]', function () {
-                this.captureSelector('screenshot/' + tournament.name + '.png', 'html');
-            });
+            //casper.waitForSelector('select[name="ctl00$DropDownListDivisions"]', function () {
+            //    this.captureSelector('screenshot/' + tournament.name + '.png', 'html');
+            //});
 
 
             casper.then(function () {
                 this.captureSelector('screenshot/' + tournament.name + '_selected.png', 'html');
-                var jobs = this.evaluate(getResults, tournament);
+                var jobs = this.evaluate(tournament.parse || getResults, tournament);
                 jobs.forEach(function (game) {
                     game.tournament = tournament.name;
                     game.homeId = convertScoreToStatsNames(game.home);
