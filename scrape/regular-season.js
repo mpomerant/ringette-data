@@ -73,6 +73,8 @@ function convertSouthernNames(teamName) {
         case 'Markham Bears':
             result = 'Markham';
             break;
+        case 'Niagara Falls Daredevils':
+            result = 'Niagara Falls'
         default:
             result = teamName;
 
