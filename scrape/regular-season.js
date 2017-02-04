@@ -514,6 +514,12 @@ var tournaments = [{
         name: 'Richmond Hill',
         complete: false,
         year: 2017
+    },
+    {
+        url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=202&du=2137&pool=All+Pools&dn=&yu=11,',
+        name: 'West Ottawa',
+        complete: false,
+        year: 2017
     }
 
 
