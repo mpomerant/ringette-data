@@ -103,6 +103,9 @@ function convertScoreToStatsNames(teamName) {
         case 'Sault Ste. Marie':
             result = 'Sault Ste Marie';
             break;
+        case 'Sault St. Marie':
+            result = 'Sault Ste Marie';
+            break;
         default:
             result = teamName;
 
