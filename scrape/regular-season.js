@@ -447,7 +447,7 @@ function getResults(tournament) {
     return jobs;
 }
 
-var IS_COMPLETE_DEFAULT = false;
+var IS_COMPLETE_DEFAULT = true;
 
 var tournaments = [{
     url: 'http://www.score2stats.com/s2s_new/user/Schedules.aspx?eu=185&du=1930&pool=+&dn=18++A++++++++++++++++++++&yu=11',
@@ -481,26 +481,26 @@ var tournaments = [{
 {
     url: 'http://apringette.com/Tournaments/1344/Divisions/1356/',
         name: 'Pickering',
-    complete: false,
+    complete: IS_COMPLETE_DEFAULT,
     parse: getPickeringResults,
     year: 2016
 },
     {
         url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=193&du=2014&pool=All+Pools&dn=&yu=11,',
         name: 'Whitby',
-        complete: false,
+        complete: IS_COMPLETE_DEFAULT,
         year: 2017
     },
     {
         url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=198&du=2075&pool=All+Pools&dn=&yu=11,',
         name: 'Waterloo',
-        complete: false,
+        complete: IS_COMPLETE_DEFAULT,
         year: 2017
     },
     {
         url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=197&du=2057&pool=All+Pools&dn=&yu=11,',
         name: 'Burlington',
-        complete: false,
+        complete: IS_COMPLETE_DEFAULT,
         year: 2017
     },
     {
