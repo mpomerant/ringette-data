@@ -520,6 +520,12 @@ var tournaments = [{
         name: 'West Ottawa',
         complete: false,
         year: 2017
+    },
+    {
+        url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=206&du=2164&pool=All+Pools&dn=&yu=11,',
+        name: 'Guelph',
+        complete: false,
+        year: 2017
     }
 
 
