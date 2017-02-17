@@ -529,6 +529,12 @@ var tournaments = [{
         name: 'Guelph',
         complete: false,
         year: 2017
+    },
+    {
+        url: 'http://www.score2stats.com/s2s_new/User/Schedules.aspx?eu=205&du=2151&pool=All+Pools&dn=&yu=11,',
+        name: 'Newmarket',
+        complete: false,
+        year: 2017
     }
 
 
