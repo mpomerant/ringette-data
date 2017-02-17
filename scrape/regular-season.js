@@ -49,6 +49,9 @@ function convertSouthernNames(teamName) {
         case 'St. Catharines Comets':
             result = 'St. Catharines';
             break;
+        case 'Paris Thunder':
+            result = 'Paris';
+            break;
         case 'Paris -':
             result = 'Paris';
             break;
